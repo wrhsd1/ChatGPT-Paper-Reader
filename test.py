@@ -9,7 +9,10 @@ summary = reader.summarize(paper)
 # save paper & load
 pickle.dump(paper, open('digested_paper.pkl', 'wb'))
 paper = pickle.load(open('digested_paper.pkl', 'rb'))
-# print summary of a section
-print(paper.paper_summaries[4])
+print(paper.paper_summaries)
 
-print(reader.question(paper, 'Describe the proposed method in details.'))
+
+# ask some question about this paper
+reader.question(paper, 'The author of this paper?')
+reader.question(paper, 'What is CNN?')
+reader.question(paper, 'What does dataset this paper use?')
